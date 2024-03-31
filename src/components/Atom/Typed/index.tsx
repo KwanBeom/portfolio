@@ -9,6 +9,7 @@ const Typed = ({
   onSuccess,
   animate,
   render,
+  animateDelay = 300,
   animateDuration = 1000,
   viewCursor = true,
 }: TypedOptions) => {
@@ -44,12 +45,16 @@ const Typed = ({
       const isLastTyped = strIndex.current === strings.length;
 
       if (animate && !isLastTyped) {
-        trigger(animateDuration);
         clearTimeout(typingTimeout);
+
+        setTimeout(() => {
+          trigger(animateDuration);
+        }, animateDelay);
+
         setTimeout(() => {
           setText('');
           typing();
-        }, animateDuration);
+        }, animateDelay + animateDuration);
       }
     }
   };

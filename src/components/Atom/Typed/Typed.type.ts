@@ -3,6 +3,7 @@ export interface TypedOptions {
   typeSpeed: number;
   strings: string[];
   animate?: boolean;
+  animateDelay?: number;
   animateDuration?: number;
   viewCursor?: boolean;
   onSuccess?: () => void;
