@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { TypedOptions } from './Typed.type';
-import useSlideUp from 'hooks/useSlideUp';
+import useSlideUp from 'hooks/animations/useSlideUp';
 import * as S from './Typed.style';
 
 const Typed = ({
@@ -19,8 +19,8 @@ const Typed = ({
   const plusCharIndex = () => (charIndex.current += 1);
   const initCharIndex = () => (charIndex.current = 0);
   const plusStrIndex = () => (strIndex.current += 1);
-  const { ref, trigger, restore } = useSlideUp<HTMLDivElement>();
-
+  const ref = useRef(null);
+  const { trigger, restore } = useSlideUp<HTMLDivElement>({ ref, mode: 'trigger' });
   const insertChar = (charactor: string) => {
     setText(prev => prev + charactor);
     plusCharIndex();
