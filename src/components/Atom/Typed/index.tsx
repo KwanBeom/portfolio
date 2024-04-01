@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { TypedOptions } from './Typed.type';
+import useFadeOut from 'hooks/animations/useFadeOut';
 import useSlideUp from 'hooks/animations/useSlideUp';
 import * as S from './Typed.style';
 
@@ -20,7 +21,8 @@ const Typed = ({
   const initCharIndex = () => (charIndex.current = 0);
   const plusStrIndex = () => (strIndex.current += 1);
   const ref = useRef(null);
-  const { trigger, restore } = useSlideUp<HTMLDivElement>({ ref, mode: 'trigger' });
+  const { trigger: slideUpTrigger, restore } = useSlideUp<HTMLDivElement>({ ref, mode: 'trigger' });
+  const { trigger: fadeOutTrigger } = useFadeOut({ ref, mode: 'trigger' });
   const insertChar = (charactor: string) => {
     setText(prev => prev + charactor);
     plusCharIndex();
@@ -48,7 +50,8 @@ const Typed = ({
         clearTimeout(typingTimeout);
 
         setTimeout(() => {
-          trigger(animateDuration);
+          slideUpTrigger(animateDuration);
+          fadeOutTrigger(animateDuration);
         }, animateDelay);
 
         setTimeout(() => {
