@@ -8,7 +8,7 @@ const useSlideUp = <T extends HTMLElement>() => {
     ref.current.animate([{ transform: 'translateY(0)', opacity: 1 }], { fill: 'forwards' });
   };
 
-  const trigger = (during: number) => {
+  const trigger = (during: number, cb?: () => void) => {
     if (!ref.current) return;
     const keyframe: Keyframe[] = [
       {
@@ -25,6 +25,7 @@ const useSlideUp = <T extends HTMLElement>() => {
     };
 
     ref.current.animate(keyframe, animateOptions);
+    if (cb) setTimeout(cb, during);
   };
 
   return { ref, trigger, restore };
