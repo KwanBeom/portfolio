@@ -1,6 +1,23 @@
+import { useEffect } from 'react';
 import { AnimationHookProps } from './AnimationHookProps.type';
 
-const useSlideUp = <T extends HTMLElement>({ ref, mode }: AnimationHookProps<T>) => {
+type SlideUpProps<T> = AnimationHookProps<T> & {
+  moveDistance?: string;
+  startPosition?: string;
+};
+
+const useSlideUp = <T extends HTMLElement>({
+  ref,
+  mode,
+  moveDistance,
+  startPosition,
+}: SlideUpProps<T>) => {
+  useEffect(() => {
+    if (ref.current && startPosition) {
+      ref.current.style.transform = `translateY(${startPosition})`;
+    }
+  }, []);
+
   const restore = () => {
     if (!ref.current) return;
     ref.current.animate([{ transform: 'translateY(0)', opacity: 1 }], { fill: 'forwards' });
@@ -11,7 +28,7 @@ const useSlideUp = <T extends HTMLElement>({ ref, mode }: AnimationHookProps<T>)
       if (!ref.current) return;
       const keyframe: Keyframe[] = [
         {
-          transform: 'translateY(-100%)',
+          transform: `translateY(-${moveDistance || '5vh'} )`,
         },
       ];
       const animateOptions: KeyframeAnimationOptions = {
@@ -25,8 +42,8 @@ const useSlideUp = <T extends HTMLElement>({ ref, mode }: AnimationHookProps<T>)
 
     percentage: (percentage: number) => {
       if (!ref.current || percentage > 100) return;
-      console.log((100 - percentage) * 0.01);
-      ref.current.style.transform = `translateY(-${percentage}%)`;
+      // TODO: 퍼센티지에도 startPosition,moveDistance 적용 가능하도록 수정 필요
+      ref.current.style.transform = `translateY(-${percentage / 10}vh)`;
     },
   };
 
