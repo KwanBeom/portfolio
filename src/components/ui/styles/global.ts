@@ -16,9 +16,11 @@ ${resetCss}
 :root {
   --main-color: #000;
   --text-color: #fff;
-  --title-font-size: clamp(2rem, 4vw + 1rem, 10rem);
-  --sub-title-font-size: clamp(1.5rem, 3vw + 1rem, 8rem);
-  --content-font-size: clamp(1rem, 2vw + 1rem, 6rem);
+  --title-font-size: clamp(3rem, 4vw + 1rem, 5rem);
+  --sub-title-font-size: clamp(2.5rem, 2.5vw + 1rem, 3.5rem);
+  --big-font-size: clamp(2rem, 2vw + 1rem, 3rem);
+  --medium-font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+  --small-font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
 }
 
 body {

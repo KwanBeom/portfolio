@@ -3,10 +3,7 @@ import styled from 'styled-components';
 
 const Font = styled.p<{ color: keyof (typeof theme)['colors'] }>`
   color: ${({ theme, color }) => theme.colors[color]};
-`;
-
-export const ContentFont = styled(Font)`
-  font-size: var(--content-font-size);
+  line-height: 1.2;
 `;
 
 export const TitleFont = styled(Font)`
@@ -15,4 +12,16 @@ export const TitleFont = styled(Font)`
 
 export const SubTitle = styled(Font)`
   font-size: var(--sub-title-font-size);
+`;
+
+export const BigFont = styled(Font)`
+  font-size: var(--big-font-size);
+`;
+
+export const MediumFont = styled(Font)`
+  font-size: var(--medium-font-size);
+`;
+
+export const SmallFont = styled(Font)`
+  font-size: var(--small-font-size);
 `;
