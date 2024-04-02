@@ -2,7 +2,6 @@ import theme from 'components/ui/styles/theme';
 import styled from 'styled-components';
 
 const Font = styled.p<{ color: keyof (typeof theme)['colors'] }>`
-  display: inline-block;
   color: ${({ theme, color }) => theme.colors[color]};
 `;
 
