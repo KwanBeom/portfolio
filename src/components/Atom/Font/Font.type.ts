@@ -1,6 +1,7 @@
 import theme from 'components/ui/styles/theme';
+import { ReactNode } from 'react';
 
 export type FontProps = {
-  children: string;
+  children: ReactNode;
   color?: keyof typeof theme.colors;
 };
