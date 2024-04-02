@@ -10,6 +10,10 @@ const blink = keyframes`
 }
 `;
 
+export const Wrapper = styled.div`
+  display: flex;
+`;
+
 export const Cursor = styled.span<{ $isTypedDone: boolean }>`
   background-color: ${({ theme }) => theme.colors.secondary};
   height: var(--title-font-size);

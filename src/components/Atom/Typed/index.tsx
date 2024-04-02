@@ -72,10 +72,10 @@ const Typed = ({
 
   return (
     <>
-      <div ref={ref}>
+      <S.Wrapper ref={ref}>
         {render(text)}
         {viewCursor && <S.Cursor $isTypedDone={strIndex.current === strings.length} />}
-      </div>
+      </S.Wrapper>
     </>
   );
 };
