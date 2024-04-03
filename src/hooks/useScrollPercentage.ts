@@ -5,11 +5,10 @@ import usePercentage from './usePercentage';
 const useScrollPercentage = <T extends HTMLElement>(
   sectionRef: React.MutableRefObject<T | null>,
 ) => {
-  const { y } = useScroll(); // 현재 스크롤 위치
+  const { y } = useScroll(sectionRef); // 현재 스크롤 위치
   const sectionHeight = useRef(0);
   const offsetTop = useRef(0); // 요소의 문서 상단으로부터의 절대 위치
   const { clientHeight } = document.documentElement;
-
   useEffect(() => {
     if (sectionRef.current) {
       sectionHeight.current = sectionRef.current.scrollHeight;
