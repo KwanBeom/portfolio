@@ -1,8 +1,9 @@
 import theme from 'components/ui/styles/theme';
 import styled from 'styled-components';
 
-const Font = styled.p<{ color: keyof (typeof theme)['colors'] }>`
+const Font = styled.p<{ fontWeight: string; color: keyof (typeof theme)['colors'] }>`
   color: ${({ theme, color }) => theme.colors[color]};
+  font-weight: ${({ fontWeight }) => fontWeight};
   line-height: 1.2;
 `;
 
