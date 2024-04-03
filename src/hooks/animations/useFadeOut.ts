@@ -29,7 +29,6 @@ const useFadeOut = <T extends HTMLElement>({ ref, mode }: AnimationHookProps<T>)
       if (!ref.current) return;
 
       ref.current.style.opacity = String((100 - percentage) * 0.01);
-      ref.current.style.display = 'block';
     },
   };
 
