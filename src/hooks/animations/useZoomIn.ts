@@ -15,7 +15,7 @@ const useZoomIn = <T extends HTMLElement>({ ref, mode, zoomScale = 1.2 }: ZoomIn
       if (!ref.current) return;
       const keyframe: Keyframe[] = [
         {
-          transform: `scale(${zoomScale})`,
+          scale: zoomScale,
         },
       ];
       const animateOptions: KeyframeAnimationOptions = {
@@ -30,7 +30,7 @@ const useZoomIn = <T extends HTMLElement>({ ref, mode, zoomScale = 1.2 }: ZoomIn
       if (!ref.current || percentage > 100) return;
       const onePercentScale = (zoomScale - 1) / 100;
 
-      ref.current.style.transform = `scale(${1 + onePercentScale * percentage})`;
+      ref.current.style.scale = String(1 + onePercentScale * percentage);
     },
   };
 
