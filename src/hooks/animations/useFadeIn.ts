@@ -24,7 +24,7 @@ const useFadeIn = <T extends HTMLElement>({ ref, mode }: AnimationHookProps<T>) 
     },
 
     percentage: (percentage: number) => {
-      if (!ref.current || percentage > 100) return;
+      if (!ref.current) return;
 
       ref.current.style.opacity = String(1 - (100 - percentage) * 0.01);
     },
