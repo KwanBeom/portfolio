@@ -16,7 +16,7 @@ const useScroll = <T extends HTMLElement>(ref?: React.MutableRefObject<T | null>
   }, 10);
 
   useEffect(() => {
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', onScroll);
