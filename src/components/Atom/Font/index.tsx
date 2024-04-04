@@ -1,36 +1,31 @@
-import React from 'react';
-import * as S from './Font.style';
-import { FontProps } from './Font.type';
+import theme from 'components/ui/styles/theme';
+import styled from 'styled-components';
 
-const TitleFont = ({ children, fontWeight = 'normal', color = 'secondary' }: FontProps) => (
-  <S.TitleFont fontWeight={fontWeight} color={color}>
-    {children}
-  </S.TitleFont>
-);
+const Font = styled.p<{ fontWeight?: string; color: keyof (typeof theme)['colors'] }>`
+  color: ${({ theme, color }) => theme.colors[color]};
+  font-weight: ${({ fontWeight }) => fontWeight};
+  line-height: 1.2;
+`;
 
-const SubTitleFont = ({ children, fontWeight = 'normal', color = 'secondary' }: FontProps) => (
-  <S.SubTitle fontWeight={fontWeight} color={color}>
-    {children}
-  </S.SubTitle>
-);
+export const TitleFont = styled(Font).attrs({ as: 'h2' })`
+  font-size: var(--title-font-size);
+`;
 
-const BigFont = ({ children, fontWeight = 'normal', color = 'secondary' }: FontProps) => (
-  <S.BigFont fontWeight={fontWeight} color={color}>
-    {children}
-  </S.BigFont>
-);
+export const SubTitleFont = styled(Font).attrs({ as: 'h3' })`
+  font-size: var(--sub-title-font-size);
+`;
 
-const MediumFont = ({ children, fontWeight = 'normal', color = 'secondary' }: FontProps) => (
-  <S.MediumFont fontWeight={fontWeight} color={color}>
-    {children}
-  </S.MediumFont>
-);
+export const BigFont = styled(Font)`
+  font-size: var(--big-font-size);
+`;
 
-const SmallFont = ({ children, fontWeight = 'normal', color = 'secondary' }: FontProps) => (
-  <S.SmallFont fontWeight={fontWeight} color={color}>
-    {children}
-  </S.SmallFont>
-);
+export const MediumFont = styled(Font)`
+  font-size: var(--medium-font-size);
+`;
+
+export const SmallFont = styled(Font)`
+  font-size: var(--small-font-size);
+`;
 
 export default {
   Title: TitleFont,
