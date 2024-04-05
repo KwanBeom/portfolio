@@ -6,16 +6,16 @@ const Font = styled.p<{ color?: keyof (typeof theme)['colors'] }>`
   line-height: 1.2;
 `;
 
-export const TitleFont = styled(Font).attrs({ as: 'h2' })`
-  font-size: var(--title-font-size);
+export const XXLargeFont = styled(Font)`
+  font-size: var(--2x-large-font-size);
 `;
 
-export const SubTitleFont = styled(Font).attrs({ as: 'h3' })`
-  font-size: var(--sub-title-font-size);
+export const XLargeFont = styled(Font)`
+  font-size: var(--x-large-font-size);
 `;
 
-export const BigFont = styled(Font)`
-  font-size: var(--big-font-size);
+export const LargeFont = styled(Font)`
+  font-size: var(--large-font-size);
 `;
 
 export const MediumFont = styled(Font)`
@@ -27,9 +27,9 @@ export const SmallFont = styled(Font)`
 `;
 
 export default {
-  Title: TitleFont,
-  SubTitle: SubTitleFont,
-  Big: BigFont,
+  XXLarge: XXLargeFont,
+  XLarge: XLargeFont,
+  Large: LargeFont,
   Medium: MediumFont,
   Small: SmallFont,
 };

@@ -6,10 +6,10 @@ import { SectionTemplateProps } from './Section.type';
 const SectionTemplate = ({ title, children }: SectionTemplateProps) => {
   return (
     <S.Section>
-      <Font.Title color="point" fontWeight="700">
+      <Font.XLarge as="h2" color="point">
         {title}
-      </Font.Title>
-      {children}
+      </Font.XLarge>
+      <div>{children}</div>
     </S.Section>
   );
 };
