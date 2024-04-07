@@ -4,7 +4,8 @@ const theme: DefaultTheme = {
   colors: {
     primary: '#000',
     secondary: '#fff',
-    point: '#0064FF',
+    tertiary: '#555',
+    point: '#f8002f',
     line: '#acacac',
   },
 };
