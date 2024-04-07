@@ -1,3 +1,4 @@
+import Font from 'components/atom/Font';
 import styled, { keyframes } from 'styled-components';
 
 export const Section = styled.section`
@@ -20,7 +21,7 @@ const bounce = keyframes`
   }
 `;
 
-export const ScrollGuide = styled.span`
+export const ScrollGuide = styled(Font.Medium)`
   opacity: 0;
   position: fixed;
   top: 80%;

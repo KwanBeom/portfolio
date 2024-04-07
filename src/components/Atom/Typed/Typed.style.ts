@@ -10,7 +10,7 @@ const blink = keyframes`
 }
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.p`
   display: flex;
 `;
 

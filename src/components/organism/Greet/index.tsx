@@ -41,14 +41,18 @@ const Greet = () => {
         <Typed
           strings={['안녕하세요 :)', 'FE 개발자 최범관입니다']}
           typeSpeed={60}
-          render={text => <Font.XXLarge color="secondary">{text}</Font.XXLarge>}
+          render={text => (
+            <Font.XXLarge as="span" color="secondary">
+              {text}
+            </Font.XXLarge>
+          )}
           animate={true}
           onSuccess={handleTypedSuccess}
         />
       </S.Fixed>
 
-      <S.ScrollGuide ref={guideRef}>
-        <Font.Medium color="secondary">아래로 내려주세요</Font.Medium>
+      <S.ScrollGuide ref={guideRef} color="secondary">
+        아래로 내려주세요
       </S.ScrollGuide>
     </S.Section>
   );
