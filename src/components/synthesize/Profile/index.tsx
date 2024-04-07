@@ -74,13 +74,6 @@ const Profile = () => {
 
 const skillList = [
   {
-    name: 'React',
-    description:
-      '리액트의 함수형 컴포넌트에 대해서 알고 사용할 수 있습니다. 커스텀 훅으로 도메인과 뷰를 적절히 분리할 수 있습니다.',
-    logo: reactLogo,
-  },
-
-  {
     name: 'JavaScript',
     description:
       '자바스크립트 ES6의 문법에 대해 알고 있습니다. async/await 문법을 활용해 비동기 로직을 다룰 수 있습니다.',
@@ -109,10 +102,17 @@ const skillList = [
   },
 
   {
-    name: 'AWS',
+    name: 'React',
     description:
-      'Amazone Web Service를 활용해 S3에 정적 리소스를 업로드 하고 CloudFront로 CDN 서비스를 이용할 수 있습니다. Route 53으로 배포된 정적 사이트와 도메인을 연결할 수 있습니다.',
-    logo: awsLogo,
+      '리액트의 함수형 컴포넌트에 대해서 알고 사용할 수 있습니다. 커스텀 훅으로 도메인과 뷰를 적절히 분리할 수 있습니다.',
+    logo: reactLogo,
+  },
+
+  {
+    name: 'Redux',
+    description:
+      '프로젝트에 직접 적용해본 적은 없지만, 덕스 패턴과 리덕스 툴킷에 대해 알고 있습니다.',
+    logo: reduxLogo,
   },
 
   {
@@ -130,10 +130,10 @@ const skillList = [
   },
 
   {
-    name: 'Redux',
+    name: 'AWS',
     description:
-      '프로젝트에 직접 적용해본 적은 없지만, 덕스 패턴과 리덕스 툴킷에 대해 알고 있습니다.',
-    logo: reduxLogo,
+      'Amazone Web Service를 활용해 S3에 정적 리소스를 업로드 하고 CloudFront로 CDN 서비스를 이용할 수 있습니다. Route 53으로 배포된 정적 사이트와 도메인을 연결할 수 있습니다.',
+    logo: awsLogo,
   },
 ];
 
