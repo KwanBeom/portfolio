@@ -11,9 +11,6 @@ const useFadeOut = <T extends HTMLElement>({ ref, mode }: AnimationHookProps<T>)
       if (!ref.current) return;
       const keyframe: Keyframe[] = [
         {
-          opacity: 1,
-        },
-        {
           opacity: 0,
         },
       ];
@@ -27,14 +24,7 @@ const useFadeOut = <T extends HTMLElement>({ ref, mode }: AnimationHookProps<T>)
 
     percentage: (percentage: number) => {
       if (!ref.current) return;
-
-      if (percentage >= 100) {
-        ref.current.style.visibility = 'hidden';
-      } else {
-        ref.current.style.visibility = 'visible';
-      }
-
-      ref.current.style.opacity = String((100 - percentage) * 0.01);
+      if (percentage > 0) ref.current.style.opacity = String((100 - percentage) * 0.01);
     },
   };
 

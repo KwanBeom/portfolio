@@ -17,7 +17,6 @@ const useFadeIn = <T extends HTMLElement>({ ref, mode }: AnimationHookProps<T>) 
 
       setTimeout(() => {
         ref.current!.style.opacity = '1';
-        ref.current!.style.visibility = 'visible';
       }, during);
 
       ref.current.animate(keyframe, animateOptions);
