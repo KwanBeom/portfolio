@@ -2,7 +2,7 @@ import theme from 'components/ui/styles/theme';
 import styled from 'styled-components';
 
 const Font = styled.p<{ color?: keyof (typeof theme)['colors'] }>`
-  color: ${({ theme, color }) => (color ? theme.colors[color] : theme.colors.secondary)};
+  color: ${({ theme, color }) => (color ? theme.colors[color] : theme.colors.primary)};
   line-height: 1.2;
 `;
 
