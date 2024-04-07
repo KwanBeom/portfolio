@@ -7,7 +7,7 @@ const PortfolioProject = () => {
     <Project
       title="포트폴리오 사이트"
       dateRange={{ start: '2023/03', end: '2024/04' }}
-      link="https://portpolio.me/"
+      link="http://beomkwan.site.s3-website.ap-northeast-2.amazonaws.com/"
       techStacks={['React', 'Gatsby', 'TypeScript', 'Styled Components']}
     >
       <Project.Detail
