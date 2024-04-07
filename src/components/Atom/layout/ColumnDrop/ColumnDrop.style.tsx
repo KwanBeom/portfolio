@@ -12,7 +12,7 @@ export const Wrapper = styled.article`
 `;
 
 export const Header = styled.header`
-  flex-basis: 30vw;
+  flex-basis: 30%;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
