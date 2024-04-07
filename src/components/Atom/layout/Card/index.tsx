@@ -6,8 +6,8 @@ const Card = ({ image, title, content }: CardProps) => {
   return (
     <S.Card>
       {image || null}
-      <S.Title>{title}</S.Title>
-      <S.Content>{content}</S.Content>
+      <h2>{title}</h2>
+      <div>{content}</div>
     </S.Card>
   );
 };
