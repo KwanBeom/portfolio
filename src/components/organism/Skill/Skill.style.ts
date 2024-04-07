@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const SkillName = styled(Font.Large).attrs({ as: 'h3' })`
   display: flex;
   gap: 1rem;
+  align-items: center;
   margin-bottom: 1rem;
 `;
 
