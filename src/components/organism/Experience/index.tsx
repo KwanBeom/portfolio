@@ -9,7 +9,7 @@ const Experience = ({ name, detail, during, learning }: ExperienceProps) => {
     <ColumnDrop>
       <ColumnDrop.Header>
         <Font.Large>{name}</Font.Large>
-        <Font.Small>{detail}</Font.Small>
+        {detail && <Font.Small>{detail}</Font.Small>}
         <Font.Small color="tertiary">
           {during.start} ~ {during.end}
         </Font.Small>
