@@ -1,4 +1,3 @@
-import Font from 'components/atom/Font';
 import styled, { keyframes } from 'styled-components';
 
 export const Section = styled.section`
@@ -17,11 +16,12 @@ export const Fixed = styled.div`
 
 const bounce = keyframes`
   50% {
-    top: 150%;
+    margin-top: 2rem;
   }
 `;
 
-export const ScrollGuide = styled(Font.Medium)`
+export const ScrollGuide = styled.p`
+  font-size: var(--medium-font-size);
   opacity: 0;
   position: fixed;
   top: 80%;
@@ -29,20 +29,20 @@ export const ScrollGuide = styled(Font.Medium)`
 
   &::after {
     content: '';
-    display: none;
     position: absolute;
     top: 100%;
+    margin-top: 1rem;
     left: 50%;
     width: var(--medium-font-size);
     transition: all 0.2s;
     aspect-ratio: 1/1;
     border-color: ${({ theme }) => theme.colors.secondary};
-    transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%);
+    rotate: 45deg;
     border-width: 3px;
     border-style: solid;
     border-top: 0;
     border-left: 0;
-    display: block;
-    animation: ${bounce} 1s infinite forwards;
+    animation: ${bounce} 1.5s infinite;
   }
 `;
