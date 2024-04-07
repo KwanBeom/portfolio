@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import resetCss from 'styled-reset';
+import mediaQuery from './mediaQuery';
 
 export default createGlobalStyle`
 ${resetCss}
@@ -14,6 +15,7 @@ ${resetCss}
 }
 
 :root {
+  /* font */
   --main-color: #000;
   --text-color: #fff;
   --2x-large-font-size: 4rem;
@@ -40,5 +42,25 @@ body {
 html {
   font-size: 10px;
   font-family: 'Pretendard-Regular';
+  
+  ${mediaQuery('smallDevice')`
+    font-size: 8px;
+  `}
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
 `;
