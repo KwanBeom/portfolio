@@ -48,6 +48,10 @@ html {
   `}
 }
 
+img {
+  max-width: 100%;
+}
+
 button {
   margin: 0;
   padding: 0;
