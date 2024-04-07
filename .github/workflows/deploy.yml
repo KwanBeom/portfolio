@@ -2,7 +2,7 @@ name: build and deploy app
 on:
   push:
     branches:
-      - main
+      - build-test
 
 jobs:
   build:
@@ -14,11 +14,10 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: 'npm install'
-        run: npm install
-
       - name: 'npm Build'
-        run: npm run build
+        run: |
+          npm install
+          npm run build
 
       - name: 'Deploy to S3'
         uses: jakejarvis/s3-sync-action@master
