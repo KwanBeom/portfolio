@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { throttle } from 'lodash';
 
 const useScroll = <T extends HTMLElement>(ref?: React.MutableRefObject<T | null>) => {
+  if (typeof window === 'undefined') return { x: 0, y: 0 };
+
   const [state, setState] = useState({ x: window.scrollX, y: window.scrollY });
   const { clientHeight } = document.documentElement;
 
