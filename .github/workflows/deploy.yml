@@ -2,7 +2,7 @@ name: build and deploy app
 on:
   push:
     branches:
-      - build-test
+      - main
 
 jobs:
   build:
