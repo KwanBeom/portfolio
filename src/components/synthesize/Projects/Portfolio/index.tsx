@@ -6,7 +6,7 @@ const PortfolioProject = () => {
   return (
     <Project
       title="포트폴리오 사이트"
-      dateRange={{ start: '2023/03', end: '2024/04' }}
+      dateRange={{ start: '2024/03', end: '2024/04' }}
       link="http://beomkwan.site.s3-website.ap-northeast-2.amazonaws.com/"
       techStacks={['React', 'Gatsby', 'TypeScript', 'Styled Components']}
     >
@@ -76,9 +76,9 @@ const PortfolioProject = () => {
                 훅에서 상태의 업데이트가 일어나 불필요한 렌더링이 발생하고 성능이 저하되는 문제가
                 발생했습니다. <br />
                 <br />
-                useScroll 훅에 인자로 요소에 대한 참조(ref)를 전달해 요소가 스크롤 영역을 벗어난
-                경우 상태 업데이트가 발생하지 않도록 하여 스크립트 로드를 161ms → 17ms로 10배
-                개선했습니다.
+                스크롤시마다 스크립트가 발생했고, 개선하기 위해 useScroll 훅에 인자로 요소에 대한
+                참조(ref)를 전달해 요소가 스크롤 영역을 벗어난 경우 상태 업데이트가 발생하지 않도록
+                하여 스크립트 로드를 161ms → 17ms로 10배 개선했습니다.
                 <S.Flex>
                   <S.HarfImg
                     src="https://web-portfolio-assets.s3.ap-northeast-2.amazonaws.com/%08scroll-problem-before.png"
