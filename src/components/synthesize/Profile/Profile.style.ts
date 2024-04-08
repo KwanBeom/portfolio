@@ -8,7 +8,7 @@ export const SkillList = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 `;
 
 export const Img = styled.img<{ scale?: number }>`

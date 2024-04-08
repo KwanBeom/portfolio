@@ -33,7 +33,7 @@ export const TechStack = styled.span`
 export const Contents = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 8rem;
 `;
 
 export const ListItem = styled.li`
