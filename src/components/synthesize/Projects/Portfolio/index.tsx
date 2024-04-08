@@ -20,10 +20,10 @@ const PortfolioProject = () => {
                 이미 많이 사용되는 라이브러리가 존재하지만 해당 기능을 직접 구현해보고 싶은 생각에
                 typed.js의 인터페이스를 참고해 직접 구현했습니다. 소스코드는{' '}
                 <a
-                  href="https://github.com/KwanBeom/resume/blob/main/src/components/Atom/Typed/index.tsx"
+                  href="https://github.com/KwanBeom/resume/blob/main/src/components/atom/Typed/index.tsx"
                   target="_blank"
                 >
-                  여기
+                  깃허브
                 </a>
                 에서 확인하실 수 있습니다.
               </>
@@ -54,7 +54,7 @@ const PortfolioProject = () => {
                   href="https://github.com/KwanBeom/resume/blob/main/src/hooks/useScrollPercentage.ts"
                   target="_blank"
                 >
-                  여기
+                  깃허브
                 </a>
                 에서 확인하실 수 있습니다.
               </>
@@ -108,7 +108,7 @@ const PortfolioProject = () => {
                   href="https://github.com/KwanBeom/resume/blob/main/src/hooks/useScrollPercentage.ts"
                   target="_blank"
                 >
-                  여기
+                  깃허브
                 </a>
                 에서 확인하실 수 있습니다.
               </>
