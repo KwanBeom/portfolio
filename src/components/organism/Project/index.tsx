@@ -29,20 +29,13 @@ const Project = ({ title, link, dateRange, techStacks, children }: ProjectProps)
   );
 };
 
-const ProjectDetail = ({
-  description,
-  aboutWhatIDid,
-  details,
-  troubleShootings,
-}: ProjectDetailProps) => {
+const ProjectDetail = ({ description, aboutWhatIDid }: ProjectDetailProps) => {
   return (
     <S.Contents>
       <ContentTemplate title="Description">
         <Font.Medium>{description}</Font.Medium>
       </ContentTemplate>
       {aboutWhatIDid && <AboutWhatIDid aboutWhatIDid={aboutWhatIDid} />}
-      {details && <Details details={details} />}
-      {troubleShootings && <TroubleShootings troubleShootings={troubleShootings} />}
     </S.Contents>
   );
 };
@@ -64,38 +57,6 @@ const AboutWhatIDid = ({ aboutWhatIDid }: Required<Pick<ProjectDetailProps, 'abo
       <Font.Medium as="ul">
         {aboutWhatIDid.map(item => (
           <Li key={item}>{item}</Li>
-        ))}
-      </Font.Medium>
-    </ContentTemplate>
-  );
-};
-
-const Details = ({ details }: Required<Pick<ProjectDetailProps, 'details'>>) => {
-  return (
-    <ContentTemplate title="Details">
-      <Font.Medium as="ul">
-        {details.map(({ title, content }) => (
-          <S.ListItem key={title}>
-            <Font.Large as="h5">{title}</Font.Large>
-            <div>{content}</div>
-          </S.ListItem>
-        ))}
-      </Font.Medium>
-    </ContentTemplate>
-  );
-};
-
-const TroubleShootings = ({
-  troubleShootings,
-}: Required<Pick<ProjectDetailProps, 'troubleShootings'>>) => {
-  return (
-    <ContentTemplate title="Trouble Shootings">
-      <Font.Medium as="ul">
-        {troubleShootings.map(({ title, content }) => (
-          <S.ListItem key={title}>
-            <Font.Large as="h5">{title}</Font.Large>
-            <div>{content}</div>
-          </S.ListItem>
         ))}
       </Font.Medium>
     </ContentTemplate>
