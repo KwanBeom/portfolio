@@ -23,10 +23,8 @@ const Greet = () => {
   const { trigger: guideFadeOut } = useFadeOut({ ref: guideRef, mode: 'percentage' });
 
   const handleTypedSuccess = () => {
-    setTimeout(() => {
-      document.body.style.overflow = 'scroll';
-      guideFadeIn(1000);
-    }, 1000);
+    document.body.style.overflow = 'scroll';
+    guideFadeIn(1000);
   };
 
   useEffect(() => {
