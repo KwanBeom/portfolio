@@ -2,13 +2,11 @@ import mediaQuery from 'components/ui/styles/mediaQuery';
 import styled from 'styled-components';
 
 export const SkillList = styled.ul`
-  li:last-child {
-    margin-bottom: 0;
-  }
-`;
-
-export const ListItem = styled.li`
-  margin-bottom: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Img = styled.img<{ scale?: number }>`
