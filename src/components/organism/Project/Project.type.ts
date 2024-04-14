@@ -10,13 +10,4 @@ export type ProjectProps = {
 
 export type ProjectDetailProps = {
   description: ReactNode;
-  aboutWhatIDid?: string[];
-  details?: {
-    title: string;
-    content: ReactNode;
-  }[];
-  troubleShootings?: {
-    title: string;
-    content: ReactNode;
-  }[];
 };

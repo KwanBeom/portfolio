@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import Font from 'components/atom/Font';
-import { Li } from 'components/atom/Li';
 import { ProjectDetailProps, ProjectProps } from './Project.type';
 import ColumnDrop from 'components/atom/layout/ColumnDrop';
 import * as S from './Project.style';
@@ -29,13 +28,12 @@ const Project = ({ title, link, dateRange, techStacks, children }: ProjectProps)
   );
 };
 
-const ProjectDetail = ({ description, aboutWhatIDid }: ProjectDetailProps) => {
+const ProjectDetail = ({ description }: ProjectDetailProps) => {
   return (
     <S.Contents>
       <ContentTemplate title="Description">
         <Font.Medium>{description}</Font.Medium>
       </ContentTemplate>
-      {aboutWhatIDid && <AboutWhatIDid aboutWhatIDid={aboutWhatIDid} />}
     </S.Contents>
   );
 };
@@ -48,18 +46,6 @@ const ContentTemplate = ({ title, children }: { title: string; children: ReactNo
       </Font.XLarge>
       {children}
     </li>
-  );
-};
-
-const AboutWhatIDid = ({ aboutWhatIDid }: Required<Pick<ProjectDetailProps, 'aboutWhatIDid'>>) => {
-  return (
-    <ContentTemplate title="About what I did">
-      <Font.Medium as="ul">
-        {aboutWhatIDid.map(item => (
-          <Li key={item}>{item}</Li>
-        ))}
-      </Font.Medium>
-    </ContentTemplate>
   );
 };
 
