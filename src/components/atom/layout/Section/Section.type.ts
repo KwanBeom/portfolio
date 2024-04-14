@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
 export type SectionTemplateProps = {
-  title: string;
+  title?: string;
   children: ReactNode;
 };
